@@ -1,0 +1,149 @@
+:root {
+  --green-color:  hsl(158, 36%, 37%);
+  --cream-color:hsl(30, 38%, 92%);
+  --dark-green:  hsl(143, 55%, 12%);
+  --gray: hsl(228, 12%, 48%);
+  --White-color: hsl(0, 0%, 100%);
+  --ff-accent: "Fraunces", serif;
+  --base: "Montserrat", sans-serif;
+
+  --ff-regular: 500;
+  --ff-bold: 700;
+}
+
+body {
+  font-family: var(--base);
+  font-weight: var(--ff-regular);
+  background-color: var(--cream-color);
+  font-size: 0.875rem;
+  display: GRID;
+  place-content: center;
+  margin: 1rem;
+  min-height: 100vh;
+}
+
+.p1{ 
+  letter-spacing: 5px;
+   margin-top: 0;
+   color: var(--gray);
+  
+ }  
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%);
+ }
+
+
+.product-picture {
+  display: block;
+  max-width: 100%;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.product-details {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+
+}
+
+.product-description {
+padding: 0.5rem;
+line-height: 1.5rem;
+font-size: 0.785rem;
+margin: 0;
+color: var(--gray);
+
+}
+
+
+
+.product-name { 
+  color: black;
+  line-height: 1.1;
+  font-family: var(--ff-accent);
+  margin:0;
+  font-size: 1.8rem;
+ 
+}
+
+
+
+.price {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+align-items: center;
+margin: 0;
+border:0;
+  }
+
+  .price-1 {
+font-size: 2.3rem;
+font-family: var(--ff-accent);
+color: var(--green-color);
+font-weight: var(--ff-bold);
+margin:0;
+  }  
+
+  .price-2 {
+      
+      text-decoration: line-through;
+      color: dimgray;
+      font-weight: lighter;
+  }
+  
+
+.cart {
+  color: white;
+  font-weight: var(--ff-bold);
+  background-color: var(--green-color);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.5em 1.5em;
+  margin: 0;
+  height: 2.7rem;
+}
+
+.cart:hover {
+  background-color: var(--dark-green);
+  
+}
+
+.cart-img {
+  margin-right: 10px;
+} 
+
+/* styling for destop mode */
+
+.product {
+  background-color: var(--White-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px; /* Add a max-width for larger screens */
+  display: flex; /* Use flex layout for larger screens */
+  flex-direction: column; /* Stack the image and details vertically on small screens */
+}
+
+@media (min-width: 600px) {
+  .product {
+    flex-direction: row; /* Change to row layout for larger screens */
+  }
+
+  .product-picture {
+    max-width: 50%; /* Adjust the image width */
+    border-top-right-radius: 0; /* Reset border-radius */
+    border-bottom-left-radius: 0.5rem; /* Apply border-radius to the image */
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+  }
+
+  .product-details {
+    max-width: 50%; /* Adjust the details width */
+  }
+}
+
+
